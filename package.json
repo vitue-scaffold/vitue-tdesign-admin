@@ -16,7 +16,7 @@
     "stylelint": "stylelint src/**/*.{html,vue,sass,less}",
     "stylelint:fix": "stylelint --fix src/**/*.{html,vue,vss,sass,less}",
     "prepare": "husky install",
-    "cz": "cz"
+    "commit": "git-cz"
   },
   "dependencies": {
     "color-string": "^1.9.0",
@@ -82,12 +82,6 @@
       "npm run stylelint:fix",
       "git add ."
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   },
   "engines": {
     "node": ">=12"
