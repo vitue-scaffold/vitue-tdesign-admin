@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "johnsoncodehk.volar",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "voorjaar.windicss-intellisense",
+    "csstools.postcss",
+    "mikestead.dotenv"
+  ]
+}

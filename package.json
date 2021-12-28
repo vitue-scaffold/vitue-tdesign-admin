@@ -1,0 +1,94 @@
+{
+  "projectName": "<%= name %>",
+  "description": "<%= description %>",
+  "author": "<%= author %>",
+  "version": "1.0.0",
+  "templateName": "vitue-tdesign-admin",
+  "private": true,
+  "scripts": {
+    "dev:mock": "vite --open --mode mock",
+    "dev": "vite --open --mode development",
+    "build:test": "vite build --mode test",
+    "build": "vue-tsc --noEmit && vite build --mode release",
+    "preview": "vite preview",
+    "lint": "eslint --ext .vue,.js,.jsx,.ts,.tsx ./ --max-warnings 0",
+    "lint:fix": "eslint --ext .vue,.js,jsx,.ts,.tsx ./ --max-warnings 0 --fix",
+    "stylelint": "stylelint src/**/*.{html,vue,sass,less}",
+    "stylelint:fix": "stylelint --fix src/**/*.{html,vue,vss,sass,less}",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "color-string": "^1.9.0",
+    "dayjs": "^1.10.6",
+    "echarts": "~5.1.2",
+    "hex-to-hsl": "^1.0.2",
+    "nprogress": "^0.2.0",
+    "tdesign-vue-next": "^0.6.0",
+    "tvision-color": "^1.3.1",
+    "vue": "^3.1.5",
+    "vue-color-kit": "^1.0.5",
+    "vue-i18n": "^9.2.0-beta.25",
+    "vue-router": "^4.0.11",
+    "vuex": "^4.0.2"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@intlify/vite-plugin-vue-i18n": "^3.2.1",
+    "@types/echarts": "^4.9.10",
+    "@types/ws": "^8.2.2",
+    "@typescript-eslint/eslint-plugin": "^4.29.3",
+    "@typescript-eslint/parser": "^4.29.3",
+    "@vitejs/plugin-vue": "^1.3.0",
+    "@vitejs/plugin-vue-jsx": "^1.1.7",
+    "@vitue/export-build-info": "^1.1.0",
+    "@vitue/export-env-json": "^1.1.0",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@w6s/eslint-config": "^2.2.0",
+    "axios": "^0.24.0",
+    "commitizen": "^4.2.4",
+    "compressorjs": "^1.0.7",
+    "eslint": "^7.32.0",
+    "http-proxy-agent": "^5.0.0",
+    "husky": "^7.0.4",
+    "less": "^4.1.1",
+    "lint-staged": "^12.1.2",
+    "mockjs": "^1.1.0",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "typescript": "^4.4.3",
+    "vite": "^2.7.1",
+    "vite-plugin-mock": "^2.9.6",
+    "vite-plugin-windicss": "^1.6.1",
+    "vite-svg-loader": "^3.1.0",
+    "vue-tsc": "^0.29.8",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-less": "^1.0.1",
+    "stylelint-order": "^4.1.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue,ts,tsx}": [
+      "prettier --write",
+      "npm run lint:fix",
+      "git add ."
+    ],
+    "*.{html,vue,vss,sass,less}": [
+      "npm run stylelint:fix",
+      "git add ."
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}
