@@ -15,7 +15,8 @@
     "lint:fix": "eslint --ext .vue,.js,jsx,.ts,.tsx ./ --max-warnings 0 --fix",
     "stylelint": "stylelint src/**/*.{html,vue,sass,less}",
     "stylelint:fix": "stylelint --fix src/**/*.{html,vue,vss,sass,less}",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "cz": "cz"
   },
   "dependencies": {
     "color-string": "^1.9.0",
