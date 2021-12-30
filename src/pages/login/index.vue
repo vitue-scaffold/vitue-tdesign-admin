@@ -5,7 +5,7 @@
     <div class="login-container">
       <div class="title-container">
         <h1 class="title margin-no">登录到</h1>
-        <h1 class="title">Vitue Starter</h1>
+        <h1 class="title">{{ W6S_PROJECT_NAME }} Starter</h1>
       </div>
 
       <login v-if="type === 'login'" />
@@ -36,9 +36,12 @@ export default defineComponent({
       type.value = val;
     };
 
+    const { W6S_PROJECT_NAME } = import.meta.env;
+
     return {
       type,
       switchType,
+      W6S_PROJECT_NAME,
     };
   },
 });

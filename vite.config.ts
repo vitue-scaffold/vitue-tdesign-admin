@@ -74,6 +74,6 @@ export default defineConfig({
   },
 
   // https://cn.vitejs.dev/config/#envdir
-  envDir: './.env',
+  envDir: './env',
   envPrefix: 'W6S_',
 });
