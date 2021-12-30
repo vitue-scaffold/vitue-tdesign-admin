@@ -1,0 +1,82 @@
+{
+  "options": [
+    {
+      "key": "mode",
+      "name": "主题模式",
+      "message": "选择项目的主题模式",
+      "default": "light",
+      "type": "list",
+      "choices": [{
+        "name": "明亮",
+        "value": "light"
+      }, {
+        "name": "暗黑",
+        "value": "dark"
+      }, {
+        "name": "跟随系统",
+        "value": "auto"
+      }]
+    },
+    {
+      "key": "color",
+      "name": "主题颜色",
+      "message": "请输入项目的主题颜色",
+      "default": "default",
+      "type": "list",
+      "choices": [{
+        "name": "默认颜色",
+        "value": "default"
+      }, {
+        "name": "蓝色",
+        "value": "cyan"
+      }, {
+        "name": "绿色",
+        "value": "green"
+      }, {
+        "name": "红色",
+        "value": "red"
+      }, {
+        "name": "紫色",
+        "value": "purple"
+      }, {
+        "name": "自定义",
+        "value": "custom"
+      }]
+    },
+    {
+      "key": "custom",
+      "name": "主题颜色",
+      "when": "",
+      "message": "请以 HEX 格式输入颜色值，例如：#007aff",
+      "type": "input"
+    },
+    {
+      "key": "layout",
+      "name": "导航布局",
+      "message": "选择项目的导航布局",
+      "default": "side",
+      "type": "list",
+      "choices": [{
+        "name": "侧边菜单",
+        "value": "side"
+      }, {
+        "name": "顶部菜单",
+        "value": "top"
+      }]
+    }, 
+    {
+      "key": "element",
+      "name": "元素显示",
+      "message": "选择项目要显示的页面元素",
+      "type": "checkbox",
+      "choices": [{
+        "name": "显示面包屑",
+        "value": "showBreadcrumbs",
+        "checked": true
+      }, {
+        "name": "显示页脚",
+        "value": "showFooter"
+      }]
+    }
+  ]
+}
