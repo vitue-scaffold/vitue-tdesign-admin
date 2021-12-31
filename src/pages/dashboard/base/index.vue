@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h3>Dashboard Page!</h3>
+    <h1>{{ $t('title') }}</h1>
+    <p>{{ $t('summary') }}</p>
   </div>
 </template>
-<script lang="ts"></script>
+<script setup lang="ts"></script>
