@@ -14,42 +14,6 @@ export default [
         component: () => import('@/pages/result/success/index.vue'),
         meta: { title: '成功页' },
       },
-      {
-        path: 'fail',
-        name: 'resultFail',
-        component: () => import('@/pages/result/fail/index.vue'),
-        meta: { title: '失败页' },
-      },
-      {
-        path: 'network-error',
-        name: 'warningNetworkError',
-        component: () => import('@/pages/result/network-error/index.vue'),
-        meta: { title: '网络异常' },
-      },
-      {
-        path: '403',
-        name: 'warning403',
-        component: () => import('@/pages/result/403/index.vue'),
-        meta: { title: '无权限' },
-      },
-      {
-        path: '404',
-        name: 'warning404',
-        component: () => import('@/pages/result/404/index.vue'),
-        meta: { title: '访问页面不存在页' },
-      },
-      {
-        path: '500',
-        name: 'warning500',
-        component: () => import('@/pages/result/500/index.vue'),
-        meta: { title: '服务器出错页' },
-      },
-      {
-        path: 'browser-incompatible',
-        name: 'warningBrowserIncompatible',
-        component: () => import('@/pages/result/browser-incompatible/index.vue'),
-        meta: { title: '浏览器不兼容页' },
-      },
     ],
   },
 ];

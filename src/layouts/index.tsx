@@ -7,7 +7,6 @@ import TDesignSideNav from './components/SideNav';
 import TDesignContent from './components/Content.vue';
 
 import { prefix } from '@/config/global';
-import TdesignSetting from './setting.vue';
 import { SettingType } from '@/interface';
 import '@/style/layout.less';
 
@@ -135,7 +134,6 @@ export default defineComponent({
             <t-layout class={this.mainLayoutCls}>{[sidebar, content]}</t-layout>
           </t-layout>
         )}
-        <TdesignSetting />
       </div>
     );
   },

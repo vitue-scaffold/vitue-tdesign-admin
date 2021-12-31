@@ -1,25 +1,16 @@
 import STYLE_CONFIG from '@/config/style';
-import {
-  COLOR_TOKEN,
-  ColorSeries,
-  ColorToken,
-  LIGHT_CHART_COLORS,
-  DARK_CHART_COLORS,
-} from '@/config/color';
+import { COLOR_TOKEN, ColorSeries } from '@/config/color';
 
 // 定义的state初始值
 const state = {
   ...STYLE_CONFIG,
-  showSettingPanel: false,
   colorList: COLOR_TOKEN,
-  chartColors: LIGHT_CHART_COLORS,
 };
 
 type IInitStateType = typeof state;
 
 interface IStateType extends IInitStateType {
   isAsideFooter: boolean;
-  showSettingPanel: boolean;
 }
 
 const mutations = {
@@ -44,14 +35,8 @@ const mutations = {
     state.isSidebarCompact = payload;
   },
 
-  toggleSettingPanel(state: IStateType, payload: boolean) {
-    state.showSettingPanel = payload;
-  },
   addColor(state: IStateType, payload: ColorSeries) {
     state.colorList = { ...state.colorList, ...payload };
-  },
-  changeChartColor(state: IStateType, payload: ColorToken) {
-    state.chartColors = { ...payload };
   },
 };
 
@@ -79,7 +64,7 @@ const actions = {
     dispatch('changeBrandTheme', payload);
     commit('update', payload);
   },
-  async changeMode({ commit, state }, payload: IStateType) {
+  async changeMode({ state }, payload: IStateType) {
     let theme = payload.mode;
 
     if (payload.mode === 'auto') {
@@ -94,8 +79,6 @@ const actions = {
     if (theme !== state.mode) {
       document.documentElement.setAttribute('theme-mode', isDarkMode ? 'dark' : '');
     }
-
-    commit('changeChartColor', isDarkMode ? DARK_CHART_COLORS : LIGHT_CHART_COLORS);
   },
   changeBrandTheme({ state }: { state: IStateType }, payload: IStateType) {
     const { brandTheme, mode } = payload;
