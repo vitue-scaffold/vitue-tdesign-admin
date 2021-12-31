@@ -32,11 +32,6 @@
               </div>
             </t-button>
           </t-dropdown>
-          <!-- <t-tooltip placement="bottom" content="系统设置">
-            <t-button theme="default" shape="square" variant="text">
-              <t-icon name="setting" @click="toggleSettingPanel" />
-            </t-button>
-          </t-tooltip> -->
         </div>
       </template>
     </t-head-menu>
@@ -93,10 +88,6 @@ export default defineComponent({
     const store = useStore();
     const router = useRouter();
 
-    const toggleSettingPanel = () => {
-      store.commit('setting/toggleSettingPanel', true);
-    };
-
     const active = computed(() => {
       const route = useRoute();
       if (!route.path) {
@@ -145,7 +136,6 @@ export default defineComponent({
 
     return {
       isSidebarCompact,
-      toggleSettingPanel,
       active,
       showMenu,
       layoutCls,
