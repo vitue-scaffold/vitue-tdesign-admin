@@ -223,7 +223,6 @@ export default defineComponent({
 
 .header-operate-left {
   display: flex;
-  margin-left: 20px;
   align-items: normal;
   line-height: 0;
 

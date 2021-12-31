@@ -23,10 +23,5 @@ export default defineComponent({
   align-items: center;
   backdrop-filter: blur(5px);
   color: @text-color-primary;
-
-  .logo {
-    width: 188px;
-    height: 64px;
-  }
 }
 </style>
